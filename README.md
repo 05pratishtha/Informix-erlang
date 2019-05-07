@@ -79,5 +79,5 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 ```
 7> odbc:sql_query(Ref, "SELECT * FROM EMPLOYEE").
           {selected,["rollno","name","gender"],
-          [{1,"Pratishtha","F"},{2,"Shesh","M"},{3,"Rohit","M"}]}
+          [{1,"Pratishtha","F"},{2,"John","M"},{3,"Sophie","F"}]}
 ```		   
