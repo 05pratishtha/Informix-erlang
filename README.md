@@ -70,7 +70,7 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 6> odbc:param_query(Ref,"INSERT INTO EMPLOYEE (RollNo, NAME, GENDER) VALUES(?, ?, ?)"
                    [{sql_integer,[2,3]},
                     {{sql_varchar, 20},
-                             ["John", "Sophie"]},
+                   ["John", "Sophie"]},
                    {{sql_char, 1}, ["M","F"]}]).
       {updated, 2}	
 ```
