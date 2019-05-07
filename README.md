@@ -77,9 +77,7 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 	
 **Fetch all data in the table employee:**
 ```
-7> odbc:sql_query(Ref, "SELECT * FROM EMPLOYEE").	
-    {selected,["RollNo","NAME","GENDER"],
-          [{1,"Pratishtha","F"},
-		   {2,"John","M"},
-           {3,"Sophie","F"}]]}
+7> odbc:sql_query(Ref, "SELECT * FROM EMPLOYEE").
+          {selected,["rollno","name","gender"],
+          [{1,"Pratishtha","F"},{2,"Shesh","M"},{3,"Rohit","M"}]}
 ```		   
