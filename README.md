@@ -35,7 +35,7 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 9) And That's Done! :relaxed:
 
 ## Now, we are ready to use Erlang API:
-### From the search menu: open command prompt and type **erl**(now, we are under erlang shell).
+### From the search menu: open command prompt and type erl (now, we are under erlang shell).
 **Getting started with the odbc connection:**
 ```
 1> odbc:start().
