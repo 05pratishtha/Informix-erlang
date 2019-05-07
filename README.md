@@ -26,10 +26,10 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 ### How to Setup the DSN (in Windows)
 1) Open ODBC Data Source(64 bit)
 2) Uder the **User DSN** tab click on the **Add...** button
-3) Select the IBM INFORMIX ODBC DRIVER(64-bit) and click on Finish.
+3) Select the **IBM INFORMIX ODBC DRIVER(64-bit)** and click on **Finish**.
 4) It will prompt **IBM Informix ODBC Driver Setup** Window
 5) Under the **General** tab put **Data Source Name** and **Description** (optional)
 6) Now, go to the **Connection** tab and fill all the required fields (which is nothing but the connection details for the Database)
 7) After filling the details click on the **Apply & Test Connection** button to test the Database connectivity.
-8) If connection gets successful click on Apply and then OK.
+8) If connection gets successful click on **Apply** and then **OK**.
 9) And That's Done! :relaxed:
