@@ -33,3 +33,18 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 7) After filling the details click on the **Apply & Test Connection** button to test the Database connectivity.
 8) If connection gets successful click on **Apply** and then **OK**.
 9) And That's Done! :relaxed:
+
+### Now, we are ready to use Erlang API:
+## From the search menu: open command prompt and type **erl**. (now, we are under erlang shell)
+### Getting started with the odbc connection:
+1 > odbc:start().
+     ok
+
+2 > **{ok, Ref} = odbc:connect**(*"DSN=erldsn;UID=informix;PWD=***"*, **[])**.
+    {ok,<0.83.0>}
+
+## Create a table:	
+3 > odbc:sql_query(Ref, "CREATE TABLE EMPLOYEE (RollNo integer,Name char  varying(20),GENDER char(1),PRIMARY KEY (RollNo))").
+   {updated,0}
+
+
