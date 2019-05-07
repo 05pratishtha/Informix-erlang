@@ -38,28 +38,28 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 ### From the search menu: open command prompt and type **erl**. (now, we are under erlang shell)
 **Getting started with the odbc connection:**
 ```
-1 > odbc:start().
+1> odbc:start().
       ok  
 
-2 > {ok, Ref} = odbc:connect("DSN=erldsn;UID=informix;PWD=", []).
+2> {ok, Ref} = odbc:connect("DSN=erldsn;UID=informix;PWD=", []).
       {ok,<0.83.0>}  
 ```
 
 **Create a table:**	
 ```
-3 > odbc:sql_query(Ref, "CREATE TABLE EMPLOYEE (RollNo integer,Name char  varying(20),GENDER char(1),PRIMARY KEY (RollNo))").
+3> odbc:sql_query(Ref, "CREATE TABLE EMPLOYEE (RollNo integer,Name char  varying(20),GENDER char(1),PRIMARY KEY (RollNo))").
       {updated,0} 
 ```
 
 **Insert some data:**
 ```
-4 > odbc:sql_query(Ref, "INSERT INTO EMPLOYEE VALUES(1, 'Pratishtha, 'F')").
+4> odbc:sql_query(Ref, "INSERT INTO EMPLOYEE VALUES(1, 'Pratishtha, 'F')").
       {updated,1}
 ```
 
 **Check what data types the database assigned for the columns:**
 ```
-5 > odbc:describe_table(Ref, "EMPLOYEE").
+5> odbc:describe_table(Ref, "EMPLOYEE").
       {ok, [{"RollNo", sql_integer},
             {"NAME", {sql_varchar, 20}},
             {"GENDER", {sql_char, 1}}]}
@@ -67,7 +67,7 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 
 **Use a parameterized query to insert many rows in one go:**
 ```
-6 > odbc:param_query(Ref,"INSERT INTO EMPLOYEE (RollNo, NAME, GENDER) VALUES(?, ?, ?)"
+6> odbc:param_query(Ref,"INSERT INTO EMPLOYEE (RollNo, NAME, GENDER) VALUES(?, ?, ?)"
                    [{sql_integer,[2,3]},
                     {{sql_varchar, 20},
                              ["John", "Sophie"]},
@@ -77,7 +77,7 @@ Informix ODBC Driver comes with the Informix CSDK Package, and to install Inform
 	
 **Fetch all data in the table employee:**
 ```
- 7 > odbc:sql_query(Ref, "SELECT * FROM EMPLOYEE").	
+7> odbc:sql_query(Ref, "SELECT * FROM EMPLOYEE").	
     {selected,["RollNo","NAME","GENDER"],
           [{1,"Pratishtha","F"},
 		   {2,"John","M"},
